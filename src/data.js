@@ -7,7 +7,7 @@ export const me = {
   intro:
     "I'm a data science grad in Liverpool, looking for my first data analyst role. I like taking messy data and turning it into something people can actually read. Right now I'm building interactive exhibits for the British Music Experience!",
   tools:
-    'I mostly work with Python, SQL, pandas and Power BI on the data side, and React and Flask when something needs building :D',
+    'I mostly work with Python, SQL, pandas and Excel on the data side, and React and Flask when something needs building. Learning Power BI right now :D',
   email: 'archanaasrinivasaa@gmail.com',
   github: 'https://github.com/archdoesthings',
   linkedin: 'https://www.linkedin.com/in/archanaasrinivasa/', // swap

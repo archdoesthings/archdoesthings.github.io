@@ -1,12 +1,16 @@
 // the wall of clippings in the hero, sorted into three groups. edit freely
 const tools = [
-  { t: 'SQL', k: 'yellow big' },
   { t: 'PYTHON', k: 'black big' },
+  { t: 'SQL', k: 'yellow big' },
   { t: 'pandas', k: 'white' },
   { t: 'REACT', k: 'white big' },
-  { t: 'POWER BI', k: 'red' },
+  { t: 'EXCEL', k: 'red' },
   { t: 'FLASK', k: 'black' },
   { t: 'node2vec', k: 'type' },
+]
+
+const learning = [
+  { t: 'POWER BI', k: 'red' },
 ]
 
 const me = [
@@ -32,6 +36,8 @@ export default function Wall() {
       <div className="wall-group">
         <p className="wall-label">I use</p>
         <Scraps list={tools} />
+        <span className="wall-learning">now learning:</span>
+        <Scraps list={learning} />
       </div>
 
       <div className="wall-group">
