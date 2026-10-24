@@ -22,7 +22,7 @@ export function Route() {
         <text x="140" y="256" className="route-note">grew up, BSc,</text>
         <text x="140" y="274" className="route-note">2 internships</text>
         <text x="110" y="36" className="route-place">Liverpool</text>
-        <text x="110" y="56" className="route-note">MSc, then BME</text>
+        <text x="110" y="56" className="route-note">MSc</text>
       </svg>
     </figure>
   )
