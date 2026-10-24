@@ -47,6 +47,7 @@ export default function Tickets({ movies }) {
 
   return (
     <>
+      <div className="films-top">
       <div className="machine">
         <div className="machine-box">
           <p className="machine-label">ticket machine</p>
@@ -65,6 +66,20 @@ export default function Tickets({ movies }) {
             stick the tickets back on
           </button>
         )}
+      </div>
+
+      <div className="rewatch">
+        <p className="rewatch-title">Most rewatched</p>
+        <ol>
+          {ranked.map((m) => (
+            <li key={m.title} className={m.seen === most ? 'is-top' : ''}>
+              <span className="rw-name">{m.title}</span>
+              <span className="rw-bar" style={{ '--w': `${(m.seen / most) * 100}%` }} />
+              <span className="rw-n">{m.seen}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
       </div>
 
       <ul className="films">
@@ -104,19 +119,6 @@ export default function Tickets({ movies }) {
           </li>
         ))}
       </ul>
-
-      <div className="rewatch">
-        <p className="rewatch-title">Most rewatched</p>
-        <ol>
-          {ranked.map((m) => (
-            <li key={m.title} className={m.seen === most ? 'is-top' : ''}>
-              <span className="rw-name">{m.title}</span>
-              <span className="rw-bar" style={{ '--w': `${(m.seen / most) * 100}%` }} />
-              <span className="rw-n">{m.seen}</span>
-            </li>
-          ))}
-        </ol>
-      </div>
     </>
   )
 }

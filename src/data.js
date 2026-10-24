@@ -163,13 +163,13 @@ export const about = [
 // leave src empty and it shows a placeholder frame
 export const photos = [
   { src: '/photos/skyline-tower.webp', caption: 'radio city tower', where: 'Liverpool' },
-  { src: '/photos/palms.webp', caption: 'palm trees all the way down to the sea', where: '' },
+  { src: '/photos/palms.webp', caption: 'private resort beach view', where: 'Andaman and Nicobar Island' },
   { src: '/photos/car-boot.webp', caption: 'barbecue with a couple of friends', where: 'Dubai' },
-  { src: '/photos/beatles.webp', caption: 'the fab four at the pier head', where: 'Liverpool' },
+  { src: '/photos/beatles.webp', caption: 'the fab four', where: 'Liverpool' },
   { src: '/photos/race-cars.webp', caption: 'Benz range', where: 'Mercedes-Benz Museum' },
-  { src: '/photos/skyline-hill.webp', caption: 'the view from everton park', where: 'Liverpool' },
-  { src: '/photos/victoria-building.webp', caption: 'the victoria building at blue hour', where: 'University of Liverpool' },
-  { src: '/photos/moon.webp', caption: 'tiny moon, blue hour', where: 'London' },
+  { src: '/photos/skyline-hill.webp', caption: 'view from everton park', where: 'Liverpool' },
+  { src: '/photos/victoria-building.webp', caption: 'the original redbrick building', where: 'University of Liverpool' },
+  { src: '/photos/moon.webp', caption: 'precious moon', where: 'London' },
   { src: '/photos/hogwarts-express.webp', caption: 'platform 9 3/4', where: 'Enroute Hogwarts' },
 ]
 

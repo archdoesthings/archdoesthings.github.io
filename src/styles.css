@@ -273,8 +273,8 @@ h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.2vw
 .flash { position: fixed; inset: 0; z-index: 60; pointer-events: none; background: #fff; animation: flash .7s ease-out forwards; }
 @keyframes flash { 0% { opacity: 0; } 8% { opacity: .9; } 100% { opacity: 0; } }
 
-.photo-wall { columns: 3 300px; column-gap: 40px; padding: 6px; }
-.photo-wall .photo { width: 100%; margin-bottom: 40px; break-inside: avoid; }
+.photo-wall { columns: 4 230px; column-gap: 28px; padding: 6px; }
+.photo-wall .photo { width: 100%; margin-bottom: 30px; break-inside: avoid; }
 .photo {
   all: unset; box-sizing: border-box; cursor: zoom-in; display: block;
   background: var(--paper-2); padding: 10px 10px 0;
@@ -330,7 +330,8 @@ h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.2vw
 .player-empty { font-family: var(--type); font-size: 14px; border: 2px dashed rgba(0,0,0,.4); padding: 16px; margin: 0 0 14px; }
 .player-link { font-weight: 600; }
 
-.machine { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px 28px; margin: 10px 0 40px; }
+.films-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 560px); gap: 30px 50px; align-items: start; margin: 10px 0 44px; }
+.machine { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px 28px; }
 .machine-box { position: relative; padding: 14px 18px 22px; background: var(--red); color: var(--paper-2); box-shadow: 0 14px 24px -12px rgba(0,0,0,.6); }
 .machine-label { margin: 0 0 8px; font-family: var(--type); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
 .machine-btn { font-family: var(--display); font-size: 22px; text-transform: uppercase; padding: 8px 16px 10px; border: 0; background: var(--yellow); color: var(--ink); cursor: pointer; box-shadow: 0 4px 0 #111; }
@@ -370,7 +371,7 @@ h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.2vw
 .film.is-torn .ticket-cover { transform: translate(-30px, 200px) rotate(-26deg); opacity: 0; pointer-events: none; }
 @media (max-width: 1000px) { .films { grid-template-columns: repeat(3, 1fr); } }
 
-.rewatch { max-width: 620px; margin-top: 56px; padding: 22px 26px 26px; background: var(--paper-2); color: var(--ink); transform: rotate(-.6deg); box-shadow: 0 16px 30px -14px rgba(0,0,0,.6); }
+.rewatch { max-width: 620px; margin-top: 0; padding: 22px 26px 26px; background: var(--paper-2); color: var(--ink); transform: rotate(-.6deg); box-shadow: 0 16px 30px -14px rgba(0,0,0,.6); }
 .rewatch-title { margin: 0 0 14px; font-family: var(--display); font-size: 28px; text-transform: uppercase; line-height: 1; }
 .rewatch ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .rewatch li { display: grid; grid-template-columns: 190px 1fr 24px; align-items: center; gap: 12px; font-family: var(--type); font-size: 14px; }
@@ -485,13 +486,14 @@ h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.2vw
 .polaroid figcaption { font-family: var(--marker); font-size: 19px; line-height: 1.2; color: var(--ink); padding: 12px 4px 16px; }
 .print figcaption { position: absolute; left: 6%; bottom: -14px; font-family: var(--marker); font-size: 26px; color: var(--ink); background: var(--paper-2); padding: 2px 12px; transform: rotate(-5deg); box-shadow: 0 4px 8px rgba(0,0,0,.25); }
 
-.flash-feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; margin-bottom: 60px; }
-.flash-print { margin: 0; background: var(--paper-2); padding: 12px 12px 48px; transform: rotate(-2deg); box-shadow: 10px 10px 0 var(--red); }
+.flash-feature { display: grid; grid-template-columns: clamp(180px, 17vw, 260px) minmax(0, 1fr); gap: 36px; align-items: center; margin-bottom: 44px; }
+.flash-print { margin: 0; background: var(--paper-2); padding: 10px 10px 34px; transform: rotate(-2deg); box-shadow: 10px 10px 0 var(--red); }
 .flash-print img { display: block; width: 100%; height: auto; }
-.flash-note { font-family: var(--display); font-size: clamp(34px, 4.4vw, 64px); line-height: .95; text-transform: uppercase; color: var(--paper-2); margin: 0; }
+.flash-note { font-family: var(--display); font-size: clamp(28px, 3.2vw, 48px); line-height: .95; text-transform: uppercase; color: var(--paper-2); margin: 0; }
 
 @media (max-width: 820px) {
-  .intro-row, .flash-feature { grid-template-columns: 1fr; }
+  .intro-row, .films-top { grid-template-columns: 1fr; }
+  .flash-feature { grid-template-columns: 38% 1fr; gap: 20px; }
   .polaroid { width: 74%; margin: 20px auto 30px; }
   .print { width: 92%; margin: 10px auto 20px; }
 }
