@@ -166,7 +166,7 @@ export const photos = [
   { src: '/photos/palms.webp', caption: 'private resort beach view', where: 'Andaman and Nicobar Island' },
   { src: '/photos/car-boot.webp', caption: 'barbecue with a couple of friends', where: 'Dubai' },
   { src: '/photos/beatles.webp', caption: 'the fab four', where: 'Liverpool' },
-  { src: '/photos/race-cars.webp', caption: 'Benz range', where: 'Mercedes-Benz Museum' },
+  { src: '/photos/race-cars.webp', caption: 'benz range', where: 'Mercedes-Benz Museum' },
   { src: '/photos/skyline-hill.webp', caption: 'view from everton park', where: 'Liverpool' },
   { src: '/photos/victoria-building.webp', caption: 'the original redbrick building', where: 'University of Liverpool' },
   { src: '/photos/moon.webp', caption: 'precious moon', where: 'London' },
@@ -178,7 +178,7 @@ export const photos = [
 export const songs = [
   { title: 'Going Shopping', artist: 'The Strokes', link: 'https://open.spotify.com/track/4dUOhTTMy4ITIbNQKPKYFP?si=eb9da6776b7a43b0', color: '#e22326' },
   { title: "She's Electric", artist: 'Oasis', link: 'https://open.spotify.com/track/4yCihiznWkDsbuIqf6mSiG?si=ae60d463e9fd4eda', color: '#111111' },
-  { title: 'Norweigan Wood', artist: 'The Beatles', link: 'https://open.spotify.com/track/1H7gMYGykdtwZOV6s1N0by?si=c2001a3d82ae49fd', color: '#ffde00' },
+  { title: 'Norwegian Wood', artist: 'The Beatles', link: 'https://open.spotify.com/track/1H7gMYGykdtwZOV6s1N0by?si=c2001a3d82ae49fd', color: '#ffde00' },
   { title: 'Nine in the Afternoon', artist: 'Panic! At the Disco', link: 'https://open.spotify.com/track/3oap5wNMWwX1dT3AVKwLzH?si=1d34c85cc59e4f5d', color: '#5b5b58' },
   { title: 'Helena', artist: 'My Chemical Romance', link: 'https://open.spotify.com/track/5dTHtzHFPyi8TlTtzoz1J9?si=2b397596989e4144', color: '#2a2a2a' },
   { title: 'What Is Life', artist: 'George Harrison', link: 'https://open.spotify.com/track/39yEXQkVAQeZksS82CnFGK?si=3b108c054ef142ed', color: '#8d8d8a' },
@@ -186,11 +186,11 @@ export const songs = [
 
 export const movies = [
   { title: 'Dead Poets Society', year: '1989', seen: 4, note: 'taught me to seize the day; carpe diem' },
-  { title: 'Interstellar', year: '2014', seen: 4, note: 'need i say anything more?' },
+  { title: 'Interstellar', year: '2014', seen: 4, note: 'need I say anything more?' },
   { title: 'Project Hail Mary', year: '2026', seen: 3, note: 'one of the best movies released in recent years, amaze' },
-  { title: 'The Truman Show', year: '1998', seen: 2, note: 'fully was convinced I was Truman when I watched it for the first time' },
+  { title: 'The Truman Show', year: '1998', seen: 2, note: 'was fully convinced I was Truman the first time I watched it' },
   { title: 'Superbad', year: '2007', seen: 2, note: 'I am McLovin' },
-  { title: 'The Greatest Showman', year: '2017', seen: 7, note: 'Top 3 musicals, hands down' },
-  { title: 'Knives Out', year: '2019', seen: 5, note: 'Notice something new with every rewatch!' },
-  { title: 'Arrival', year: '2016', seen: 3, note: 'The concept of communication was something very new' }
+  { title: 'The Greatest Showman', year: '2017', seen: 7, note: 'top 3 musicals, hands down' },
+  { title: 'Knives Out', year: '2019', seen: 5, note: 'notice something new with every rewatch!' },
+  { title: 'Arrival', year: '2016', seen: 3, note: 'made me rethink what talking even is' }
 ]
