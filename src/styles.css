@@ -63,6 +63,19 @@ p { margin: 0 0 1em; }
 
 /* pile edit mode, only on the dev server with ?edit */
 .desk-editing { z-index: 20; }
+.desk.has-note { z-index: 30; }
+.desk-live { padding: 0; border: 0; background: none; cursor: pointer; text-decoration: none; }
+.desk-live img { display: block; width: 100%; height: auto; user-select: none; }
+.desk-live:focus-visible { outline: 3px dashed var(--red); outline-offset: 6px; }
+.desk-note {
+  position: absolute; z-index: 60; white-space: nowrap; pointer-events: none;
+  padding: .35cqw .8cqw .45cqw; background: var(--yellow); color: var(--ink);
+  font-family: var(--marker); font-size: 1.15cqw; line-height: 1.1; box-shadow: 0 4px 0 var(--ink);
+  transform: rotate(-4deg); animation: note-in .18s ease-out;
+}
+.desk-note.is-link { background: var(--ink); color: var(--yellow); box-shadow: 0 4px 0 var(--red); }
+@keyframes note-in { from { opacity: 0; transform: translateY(6px) rotate(-4deg); } }
+@media (max-width: 820px) { .desk-note { font-size: 3.4cqw; padding: 1cqw 2cqw; } }
 .desk-editing .desk-item { cursor: grab; transition: none; touch-action: none; }
 .desk-editing .desk-item:hover { transform: rotate(var(--rot)); }
 .desk-editing .desk-item:active { cursor: grabbing; }
@@ -391,6 +404,7 @@ h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.2vw
 /* separate pages */
 .page { min-height: calc(100svh - 160px); }
 .block.page { padding-top: clamp(50px, 6vw, 90px); }
+.otc .hobby { scroll-margin-top: 20px; }
 .block.otc > * { max-width: 1760px; }
 @media (min-width: 821px) {
   .otc .photo-wall { columns: 5 220px; }

@@ -1,9 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  # turn the push trigger back on once the repo is public
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

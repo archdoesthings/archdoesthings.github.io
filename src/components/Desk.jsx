@@ -17,14 +17,14 @@ function SdCard() {
 }
 
 const items = [
-  { id: 'laptop', label: 'Laptop', src: '/punk/laptop.webp', cls: 'd-laptop' },
-  { id: 'headphones', label: 'XM5s', src: '/punk/xm5.webp', cls: 'd-headphones' },
-  { id: 'coffee', label: 'Dolce Gusto', src: '/punk/dolce.webp', cls: 'd-coffee' },
-  { id: 'cap', label: 'Cap', src: '/punk/cap.webp', cls: 'd-cap' },
-  { id: 'earphones', label: 'Earphones', src: '/punk/earphones.webp', cls: 'd-earphones' },
-  { id: 'snoopy', label: 'Snoopy', src: '/punk/snoopy.webp', cls: 'd-snoopy' },
-  { id: 'sd', label: 'SD card', C: SdCard, cls: 'd-sd' },
-  { id: 'digicam', label: 'Cyber-shot', src: '/punk/cybershot.webp', cls: 'd-digicam' },
+  { id: 'laptop', label: 'Laptop', src: '/punk/laptop.webp', cls: 'd-laptop', href: '#/projects', go: 'See my projects' },
+  { id: 'headphones', label: 'XM5s', src: '/punk/xm5.webp', cls: 'd-headphones', href: '#/off-the-clock?go=music', go: 'Songs on repeat' },
+  { id: 'coffee', label: 'Dolce Gusto', src: '/punk/dolce.webp', cls: 'd-coffee', note: "can't live without it" },
+  { id: 'cap', label: 'Cap', src: '/punk/cap.webp', cls: 'd-cap', note: 'fav cap ever' },
+  { id: 'earphones', label: 'Earphones', src: '/punk/earphones.webp', cls: 'd-earphones', href: '#/off-the-clock?go=music', go: 'Songs on repeat' },
+  { id: 'snoopy', label: 'Snoopy', src: '/punk/snoopy.webp', cls: 'd-snoopy', note: 'avid plushy collector' },
+  { id: 'sd', label: 'SD card', C: SdCard, cls: 'd-sd', href: '#/off-the-clock?go=photos', go: "Photos I've taken" },
+  { id: 'digicam', label: 'Cyber-shot', src: '/punk/cybershot.webp', cls: 'd-digicam', href: '#/off-the-clock?go=photos', go: "Photos I've taken" },
 ]
 
 const editing = import.meta.env.DEV && new URLSearchParams(location.search).has('edit')
@@ -93,6 +93,15 @@ function Editor({ layout, setLayout, sel, setSel }) {
 export default function Desk() {
   const [layout, setLayout] = useState(saved)
   const [sel, setSel] = useState(null)
+  const [noted, setNoted] = useState(null)
+  const [hover, setHover] = useState(null)
+  const timer = useRef(null)
+  const showNote = (id) => {
+    clearTimeout(timer.current)
+    setNoted((n) => (n === id ? null : id))
+    timer.current = setTimeout(() => setNoted(null), 2600)
+  }
+  useEffect(() => () => clearTimeout(timer.current), [])
   const desk = useRef(null)
   const drag = useRef(null)
 
@@ -148,8 +157,8 @@ export default function Desk() {
 
   return (
     <>
-      <div ref={desk} className={`desk ${editing ? 'desk-editing' : ''}`} aria-hidden="true">
-        <svg width="0" height="0" style={{ position: 'absolute' }}>
+      <div ref={desk} className={`desk ${editing ? 'desk-editing' : ''} ${hover || noted ? 'has-note' : ''}`}>
+        <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
           <filter id="xerox" x="-5%" y="-5%" width="110%" height="110%">
             <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="4" result="n" />
             <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.35" result="specks" />
@@ -160,10 +169,20 @@ export default function Desk() {
             </feMerge>
           </filter>
         </svg>
-        {items.map(({ id, src, C, cls }) => {
+        {items.map(({ id, label, src, C, cls, href, go, note }) => {
           const v = layout[id]
           if (!v || (v.hidden && !editing)) return null
           const style = { '--l': `${v.l}%`, '--t': `${v.t}%`, '--w': `${v.w}%`, '--rot': `${v.r}deg`, '--z': v.z }
+          if (!editing && (href || note)) {
+            const kids = src ? <img src={src} alt="" draggable="false" /> : <C />
+            const cn = `desk-item ${src ? 'desk-photo' : ''} desk-live ${cls}`
+            const on = { onMouseEnter: () => setHover(id), onMouseLeave: () => setHover(null), onFocus: () => setHover(id), onBlur: () => setHover(null) }
+            return href ? (
+              <a key={id} href={href} className={cn} style={style} aria-label={`${label}: ${go}`} {...on}>{kids}</a>
+            ) : (
+              <button key={id} type="button" className={cn} style={style} aria-label={`${label}: ${note}`} onClick={() => showNote(id)} {...on}>{kids}</button>
+            )
+          }
           const props = {
             'data-id': id,
             style,
@@ -172,8 +191,24 @@ export default function Desk() {
             onPointerMove: move,
             onPointerUp: up,
           }
-          return src ? <img key={id} {...props} src={src} alt="" draggable="false" /> : <span key={id} {...props}><C /></span>
+          return src ? <img key={id} {...props} src={src} alt="" draggable="false" /> : <span key={id} {...props} aria-hidden="true"><C /></span>
         })}
+        {!editing && (() => {
+          const id = hover || noted
+          const it = items.find((x) => x.id === id)
+          const v = id && layout[id]
+          if (!it || !v) return null
+          return (
+            <span
+              key={id}
+              className={`desk-note ${it.href ? 'is-link' : ''}`}
+              style={{ left: `${v.w < 15 ? v.l + v.w + 1 : v.l + v.w * 0.55}%`, top: `${Math.max(v.t, -4)}%` }}
+              aria-hidden="true"
+            >
+              {it.note || it.go}
+            </span>
+          )
+        })()}
       </div>
       {editing && <Editor layout={layout} setLayout={setLayout} sel={sel} setSel={setSel} />}
     </>

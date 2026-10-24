@@ -152,11 +152,21 @@ function Experience() {
 }
 
 function OffTheClock() {
+  // #/off-the-clock?go=music jumps straight to that section (used by the pile on the home page)
+  useEffect(() => {
+    const go = new URLSearchParams(location.hash.split('?')[1]).get('go')
+    if (!go) return
+    const jump = () => document.getElementById(go)?.scrollIntoView({ block: 'start' })
+    jump()
+    const t = setTimeout(jump, 500)
+    return () => clearTimeout(t)
+  }, [])
+
   return (
     <section className="block dark page otc">
       <h1 className="page-title">Off the clock</h1>
 
-      <div className="hobby">
+      <div className="hobby" id="photos">
         <div className="hobby-head">
           <h3>Photos I've taken</h3>
         </div>
@@ -169,12 +179,12 @@ function OffTheClock() {
         <Photos photos={photos} />
       </div>
 
-      <div className="hobby">
+      <div className="hobby" id="music">
         <h3>Songs on repeat</h3>
         <Shelf songs={songs} />
       </div>
 
-      <div className="hobby">
+      <div className="hobby" id="films">
         <h3>Films I'd rewatch tonight</h3>
         <Tickets movies={movies} note="space, aliens and one murder. i'm sensing a theme" />
       </div>
