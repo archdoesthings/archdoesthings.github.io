@@ -1,5 +1,3 @@
-// the pile of stuff in the hero. photos are pre-cut images in public/punk
-// positions live in src/deskLayout.json. run the dev server and open /?edit to move things
 import { useEffect, useRef, useState } from 'react'
 import saved from '../deskLayout.json'
 
@@ -135,7 +133,6 @@ export default function Desk() {
     setLayout((L) => ({ ...L, [d.id]: { ...L[d.id], l, t } }))
   }
   const up = () => { drag.current = null }
-  // react's wheel handler is passive, so attach our own to stop the page scrolling while resizing
   const selRef = useRef(sel)
   selRef.current = sel
   useEffect(() => {

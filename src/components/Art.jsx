@@ -1,5 +1,3 @@
-// little generated pictures for each project until you have screenshots
-
 function rand(seed) {
   let s = seed
   return () => {

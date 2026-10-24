@@ -1,4 +1,3 @@
-// the side column on the experience page
 export function Route() {
   const ink = { fill: 'none', stroke: '#111', strokeWidth: 3, strokeLinecap: 'round' }
   const pin = (x, y) => (

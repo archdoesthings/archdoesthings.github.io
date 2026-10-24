@@ -1,5 +1,3 @@
-// everything you'd want to edit lives in this file
-
 export const me = {
   name: 'Archana',
   role: 'data analyst & software developer',
@@ -10,7 +8,7 @@ export const me = {
     'I mostly work with Python, SQL, pandas and Excel on the data side, and React and Flask when something needs building. Learning Power BI right now :D',
   email: 'archanaasrinivasaa@gmail.com',
   github: 'https://github.com/archdoesthings',
-  linkedin: 'https://www.linkedin.com/in/archanaasrinivasa/', // swap
+  linkedin: 'https://www.linkedin.com/in/archanaasrinivasa/',
   cv: {
     data: '/cv/Archana-Srinivasa-Murthy-CV-Data-Analyst.pdf',
     dev: '/cv/Archana-Srinivasa-Murthy-CV-Software-Developer.pdf',
@@ -18,8 +16,6 @@ export const me = {
 }
 
 
-// side A = data, side B = software
-// art: network | bars | waveform | graph | hand | path
 export const tracks = [
   {
     side: 'B',
@@ -115,7 +111,6 @@ export const tracks = [
   },
 ]
 
-// fill in your real dates
 export const experience = [
   {
     when: '2026',
@@ -157,23 +152,18 @@ export const about = [
   "Most of my favourite projects end up somewhere between data and music. I care about the boring parts too: cleaning the data, checking the numbers, and writing it up so someone else can follow it.",
 ]
 
-// off the clock
 
-// put your pictures in public/photos and point src at them, e.g. '/photos/01.jpg'
-// leave src empty and it shows a placeholder frame
 export const photos = [
   { src: '/photos/skyline-tower.webp', caption: 'radio city tower', where: 'Liverpool' },
-  { src: '/photos/palms.webp', caption: 'private resort beach view', where: 'Andaman and Nicobar Island' },
+  { src: '/photos/palms.webp', caption: 'private resort beach view', where: 'Andaman and Nicobar Islands' },
   { src: '/photos/car-boot.webp', caption: 'barbecue with a couple of friends', where: 'Dubai' },
   { src: '/photos/beatles.webp', caption: 'the fab four', where: 'Liverpool' },
   { src: '/photos/race-cars.webp', caption: 'benz range', where: 'Mercedes-Benz Museum' },
   { src: '/photos/skyline-hill.webp', caption: 'view from everton park', where: 'Liverpool' },
   { src: '/photos/moon.webp', caption: 'precious moon', where: 'London' },
-  { src: '/photos/hogwarts-express.webp', caption: 'platform 9 3/4', where: 'Enroute Hogwarts' },
+  { src: '/photos/hogwarts-express.webp', caption: 'platform 9 3/4', where: 'en route to Hogwarts' },
 ]
 
-// link: paste a Spotify track link (Share > Copy song link) and it plays on the page
-// color is the cd cover colour
 export const songs = [
   { title: 'Going Shopping', artist: 'The Strokes', link: 'https://open.spotify.com/track/4dUOhTTMy4ITIbNQKPKYFP?si=eb9da6776b7a43b0', color: '#e22326' },
   { title: "She's Electric", artist: 'Oasis', link: 'https://open.spotify.com/track/4yCihiznWkDsbuIqf6mSiG?si=ae60d463e9fd4eda', color: '#111111' },

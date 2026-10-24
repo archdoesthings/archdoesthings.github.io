@@ -1,4 +1,3 @@
-// the wall of clippings in the hero, sorted into three groups. edit freely
 const tools = [
   { t: 'PYTHON', k: 'black big' },
   { t: 'SQL', k: 'yellow big' },

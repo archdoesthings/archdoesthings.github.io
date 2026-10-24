@@ -4,7 +4,6 @@ import Doodle from './Doodle.jsx'
 const tilts = [-2, 1.5, -1, 2, -1.5, 1, -2.5, 1.8]
 const papers = ['#ffde00', '#f6f4ee', '#e9e7e0', '#ffde00', '#f6f4ee', '#ffde00', '#e9e7e0', '#f6f4ee']
 
-// tally marks in groups of five
 function Tally({ n }) {
   const groups = Array.from({ length: Math.ceil(n / 5) }, (_, g) => Math.min(5, n - g * 5))
   return (

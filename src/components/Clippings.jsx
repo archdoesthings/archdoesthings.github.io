@@ -43,14 +43,12 @@ function Case({ t, caseRef }) {
 }
 
 export default function Clippings({ tracks }) {
-  // #/projects?show=<id> opens that card straight away
   const asked = new URLSearchParams(location.hash.split('?')[1]).get('show')
   const start = Math.max(0, tracks.findIndex((t) => t.id && t.id === asked))
   const [open, setOpen] = useState(start)
   const caseRef = useRef(null)
   const clicked = useRef(!!asked)
 
-  // only scroll after a click, not on first load
   useEffect(() => {
     if (!clicked.current) return
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches

@@ -3,7 +3,6 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// lets the pile editor (/?edit) save positions. dev server only, never in the built site
 function deskLayoutSaver() {
   const file = path.resolve('src/deskLayout.json')
   return {
@@ -22,7 +21,6 @@ function deskLayoutSaver() {
             const data = JSON.parse(body)
             const ok = Object.values(data).every((v) => ['l', 't', 'w', 'r', 'z'].every((k) => typeof v[k] === 'number'))
             if (!ok) throw new Error('unexpected layout shape')
-            // one line per item so the file stays easy to read
             const lines = Object.entries(data).map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`)
             fs.writeFileSync(file, '{\n' + lines.join(',\n') + '\n}\n')
             res.end('ok')
@@ -36,7 +34,6 @@ function deskLayoutSaver() {
   }
 }
 
-// user site (archdoesthings.github.io) is served from the root, so base stays '/'
 export default defineConfig({
   plugins: [react(), deskLayoutSaver()],
   base: '/',

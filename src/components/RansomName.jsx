@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-// each letter has two cut-outs; clicking swaps between them
 const letters = [
   { ch: 'a', pick: 'vintage', alt: 'vivid', r: -5, y: 0 },
   { ch: 'r', pick: 'vintage', alt: 'vivid', r: 4, y: 14 },

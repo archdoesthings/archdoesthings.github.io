@@ -10,7 +10,6 @@ import Weather from './components/Weather.jsx'
 import { Route, Glance } from './components/Side.jsx'
 import { me, tracks, experience, education, about, photos, songs, movies } from './data.js'
 
-// each page lives at #/name so it works on github pages without extra setup
 const pages = [
   { id: 'projects', label: 'Projects', title: "Things I've made" },
   { id: 'experience', label: 'Experience', title: "Where I've been" },
@@ -160,7 +159,6 @@ function Experience() {
 }
 
 function OffTheClock() {
-  // #/off-the-clock?go=music jumps straight to that section (used by the pile on the home page)
   useEffect(() => {
     const go = new URLSearchParams(location.hash.split('?')[1]).get('go')
     if (!go) return

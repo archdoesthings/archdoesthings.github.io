@@ -1,8 +1,6 @@
-// little hint drawings for the guess the film game. all hand drawn shapes, nothing traced
 const ink = { fill: 'none', stroke: '#111', strokeWidth: 3, strokeLinecap: 'round', strokeLinejoin: 'round' }
 
 const doodles = {
-  // a desk with someone standing on it
   'Dead Poets Society': (
     <>
       <path {...ink} d="M22 92 H98 M28 92 V124 M92 92 V124 M22 86 H98 V92" />
@@ -11,7 +9,6 @@ const doodles = {
       <path {...ink} d="M30 24 l4 -6 M88 22 l-3 -7 M96 36 l6 -3" />
     </>
   ),
-  // hourglass and a ringed planet
   Interstellar: (
     <>
       <path {...ink} d="M24 30 H62 M24 118 H62 M28 30 C28 62 58 62 58 74 C58 86 28 86 28 118 M58 30 C58 62 28 62 28 74 C28 86 58 86 58 118" />
@@ -20,7 +17,6 @@ const doodles = {
       <ellipse {...ink} cx="88" cy="56" rx="26" ry="7" transform="rotate(-18 88 56)" />
     </>
   ),
-  // a dimming sun and a tiny ship heading for it
   'Project Hail Mary': (
     <>
       <circle {...ink} cx="70" cy="56" r="24" />
@@ -30,7 +26,6 @@ const doodles = {
       <path {...ink} strokeDasharray="2 5" d="M42 118 C 52 106, 52 96, 60 84" />
     </>
   ),
-  // a boat that's sailed into the sky, with stairs up to a door
   'The Truman Show': (
     <>
       <path {...ink} d="M24 34 c0 -8 12 -10 16 -4 c4 -6 16 -4 14 4 c4 2 2 8 -4 8 h-22 c-6 0 -8 -6 -4 -8 Z" />
@@ -43,7 +38,6 @@ const doodles = {
       <path {...ink} d="M4 114 q8 -5 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0" />
     </>
   ),
-  // a dodgy id card
   Superbad: (
     <>
       <rect {...ink} x="14" y="40" width="92" height="58" rx="6" />
@@ -55,7 +49,6 @@ const doodles = {
       <text x="60" y="122" textAnchor="middle" fontFamily="Special Elite, monospace" fontSize="13" fill="#111">age: definitely 25</text>
     </>
   ),
-  // a striped tent and a top hat
   'The Greatest Showman': (
     <>
       <path {...ink} d="M16 108 L36 52 L60 30 L84 52 L104 108 Z" />
@@ -64,7 +57,6 @@ const doodles = {
       <path {...ink} d="M80 122 H112 M86 122 V104 H106 V122" />
     </>
   ),
-  // magnifying glass over a knife
   'Knives Out': (
     <>
       <path {...ink} d="M44 96 L100 30 L96 50 L52 104 Z" />
@@ -75,7 +67,6 @@ const doodles = {
       <path {...ink} d="M44 42 C 48 38, 54 38, 58 40" />
     </>
   ),
-  // an inky circle that's trying to say something
   Arrival: (
     <>
       <circle {...ink} strokeWidth="7" cx="60" cy="68" r="34" strokeDasharray="60 8 30 6 90 10" />

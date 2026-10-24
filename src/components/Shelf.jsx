@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 
-// turns a normal spotify track link into the embed version
 function embedUrl(link) {
   const m = link?.match(/open\.spotify\.com\/(?:intl-[a-z]+\/)?(track|album|playlist)\/([A-Za-z0-9]+)/)
   return m ? `https://open.spotify.com/embed/${m[1]}/${m[2]}?theme=0` : null
 }
 
-// asks spotify for the album art in the visitor's browser. set `cover` in data.js to use your own image instead
 function useArt(link, own) {
   const [art, setArt] = useState(own || null)
   useEffect(() => {

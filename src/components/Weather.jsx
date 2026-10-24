@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 
-// open-meteo is free and doesn't need a key
 const URL =
   'https://api.open-meteo.com/v1/forecast?latitude=53.41&longitude=-2.98&current=temperature_2m,weather_code&timezone=Europe%2FLondon'
 
