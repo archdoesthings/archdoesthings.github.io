@@ -80,13 +80,12 @@ export const tracks = [
     length: 'internship',
     art: 'graph',
     question:
-      'How do you let museum visitors wander through a music knowledge graph without it turning into a hairball?',
+      'How do you let museum visitors explore music with their hands, no mouse or touchscreen?',
     did:
-      'Built the React canvas views for genres, instruments and museum zones: force-directed layouts, curved edges with hover highlighting, paginated artist views that group band-mates, and cross-links between neighbours. Also worked on Leap Motion gesture control.',
+      'Built three React screens for the museum: genres as a DJ deck, instruments as 3D models on a stage, and zones as cards that flip on their own to show each part of the museum. Also built the Leap Motion gesture controls visitors use to get around them: grab to select, grab and move to pan, swipe left or right to go back, and hover.',
     stats: [{ n: '4', l: 'gesture types' }],
-    found:
-      'Tracked down a guard clause that was quietly dropping real edges from the graph, which is the kind of bug you only spot by staring at the data.',
-    stack: ['React', 'Canvas', 'JavaScript', 'Leap Motion'],
+    found: '',
+    stack: ['React', 'React Three Fiber', 'Three.js', 'Leap Motion'],
     links: [],
   },
   {
@@ -110,7 +109,7 @@ export const experience = [
     when: '2026',
     what: 'Software Developer Intern',
     where: 'British Music Experience, via University of Liverpool',
-    note: 'React screens for a live museum installation, including a music knowledge graph and DJ deck and instrument screens, plus Leap Motion gesture controls. Going live in November.',
+    note: 'React screens for a live museum installation (a DJ deck, a 3D instrument stage and flipping zone cards), plus Leap Motion gesture controls. Going live in November.',
   },
   {
     when: '2025',
