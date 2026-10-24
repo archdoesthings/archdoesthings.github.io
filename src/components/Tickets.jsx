@@ -21,7 +21,7 @@ function Tally({ n }) {
   )
 }
 
-export default function Tickets({ movies }) {
+export default function Tickets({ movies, note }) {
   const [torn, setTorn] = useState({})
   const [printed, setPrinted] = useState(null)
   const [flash, setFlash] = useState(null)
@@ -48,6 +48,8 @@ export default function Tickets({ movies }) {
   return (
     <>
       <div className="films-top">
+      <div className="films-left">
+      {note && <p className="theme-note">{note}</p>}
       <div className="machine">
         <div className="machine-box">
           <p className="machine-label">ticket machine</p>
@@ -66,6 +68,7 @@ export default function Tickets({ movies }) {
             stick the tickets back on
           </button>
         )}
+      </div>
       </div>
 
       <div className="rewatch">

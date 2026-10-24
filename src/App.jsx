@@ -44,6 +44,7 @@ function Links({ email = true }) {
     <div className="stickers">
       <a href={me.cv.data} target="_blank" rel="noreferrer" className="sticker-link yellow">Data analyst CV</a>
       <a href={me.cv.dev} target="_blank" rel="noreferrer" className="sticker-link yellow">Developer CV</a>
+      <span className="stickers-break" aria-hidden="true" />
       <a href={me.github} target="_blank" rel="noreferrer" className="sticker-link black">GitHub</a>
       <a href={me.linkedin} target="_blank" rel="noreferrer" className="sticker-link white">LinkedIn</a>
       {email && <a href={`mailto:${me.email}`} className="sticker-link red">Email me</a>}
@@ -152,7 +153,7 @@ function Experience() {
 
 function OffTheClock() {
   return (
-    <section className="block dark page">
+    <section className="block dark page otc">
       <h1 className="page-title">Off the clock</h1>
 
       <div className="hobby">
@@ -175,8 +176,7 @@ function OffTheClock() {
 
       <div className="hobby">
         <h3>Films I'd rewatch tonight</h3>
-        <p className="theme-note">space, aliens and one murder. i'm sensing a theme</p>
-        <Tickets movies={movies} />
+        <Tickets movies={movies} note="space, aliens and one murder. i'm sensing a theme" />
       </div>
     </section>
   )
