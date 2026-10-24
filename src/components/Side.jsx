@@ -10,7 +10,7 @@ export function Route() {
   return (
     <figure className="side route">
       <p className="side-title">the route so far</p>
-      <svg viewBox="0 0 340 380" role="img" aria-label="India, then Dubai, then Liverpool">
+      <svg viewBox="0 0 370 380" role="img" aria-label="India, then Dubai, then Liverpool">
         <path {...ink} strokeDasharray="2 9" d="M250 320 C 200 300, 150 300, 120 250 S 120 150, 190 120 S 120 60, 90 60" />
         <path {...ink} d="M84 52 l12 10 M96 52 l-12 10" stroke="#e22326" />
         {pin(250, 320)}
@@ -19,10 +19,9 @@ export function Route() {
         <text x="250" y="348" textAnchor="middle" className="route-place">India</text>
         <text x="250" y="368" textAnchor="middle" className="route-note">where i'm from</text>
         <text x="140" y="236" className="route-place">Dubai</text>
-        <text x="140" y="256" className="route-note">grew up, BSc,</text>
-        <text x="140" y="274" className="route-note">2 internships</text>
+        <text x="140" y="256" className="route-note">grew up, BSc, 2 internships</text>
         <text x="110" y="36" className="route-place">Liverpool</text>
-        <text x="110" y="56" className="route-note">MSc</text>
+        <text x="110" y="56" className="route-note">MSc, 1 internship</text>
       </svg>
     </figure>
   )
