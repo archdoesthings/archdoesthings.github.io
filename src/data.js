@@ -5,7 +5,7 @@ export const me = {
   role: 'data analyst & software developer',
   location: 'Liverpool, UK',
   intro:
-    "I'm a data science grad in Liverpool, looking for my first data analyst role. I like taking messy data and turning it into something people can actually read. Right now I'm building interactive exhibits for the British Music Experience!",
+    "I'm a data science grad in Liverpool, looking for my first data analyst role. I like taking messy data and turning it into something people can actually read. Right now I'm helping build an interactive exhibit for the British Music Experience!",
   tools:
     'I mostly work with Python, SQL, pandas and Excel on the data side, and React and Flask when something needs building. Learning Power BI right now :D',
   email: 'archanaasrinivasaa@gmail.com',
@@ -168,7 +168,6 @@ export const photos = [
   { src: '/photos/beatles.webp', caption: 'the fab four', where: 'Liverpool' },
   { src: '/photos/race-cars.webp', caption: 'benz range', where: 'Mercedes-Benz Museum' },
   { src: '/photos/skyline-hill.webp', caption: 'view from everton park', where: 'Liverpool' },
-  { src: '/photos/victoria-building.webp', caption: 'the original redbrick building', where: 'University of Liverpool' },
   { src: '/photos/moon.webp', caption: 'precious moon', where: 'London' },
   { src: '/photos/hogwarts-express.webp', caption: 'platform 9 3/4', where: 'Enroute Hogwarts' },
 ]

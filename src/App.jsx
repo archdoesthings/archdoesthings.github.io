@@ -57,6 +57,7 @@ function Home() {
     <>
       <section className="hero">
         <Desk />
+        <span className="name-strip" aria-hidden="true" />
         <RansomName />
         <Wall />
         <figure className="panel">
@@ -138,14 +139,21 @@ function Experience() {
           <Timeline items={experience} />
           <h2 className="sheet-head">Education</h2>
           <Timeline items={education} />
-          <div className="about">
-            {about.map((p, i) => <p key={i}>{p}</p>)}
-          </div>
         </div>
         <aside className="exp-side">
           <Route />
           <Glance />
         </aside>
+      </div>
+      <div className="about-row">
+        <div className="about">
+          <p className="about-label">a bit more about me</p>
+          {about.map((p, i) => <p key={i}>{p}</p>)}
+        </div>
+        <figure className="about-photo">
+          <img src="/photos/victoria-building.webp" alt="The Victoria Building at the University of Liverpool at dusk" loading="lazy" />
+          <figcaption>where the MSc happened</figcaption>
+        </figure>
       </div>
     </section>
   )
