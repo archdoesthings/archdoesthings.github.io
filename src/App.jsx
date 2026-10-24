@@ -196,7 +196,7 @@ function Contact() {
   return (
     <section className="contact page">
       <h1 className="page-title">Get in touch</h1>
-      <p>Hiring for a data or developer role, or just want to send me a song? Email me.</p>
+      <p>I'm open to data analyst and developer roles anywhere in the UK. Hiring, or just want to send me a song? Email me.</p>
       <a className="mail" href={`mailto:${me.email}`}>{me.email.split('@')[0]}<wbr />@{me.email.split('@')[1]}</a>
       <Links email={false} />
     </section>
