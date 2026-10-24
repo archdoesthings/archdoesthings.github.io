@@ -75,7 +75,7 @@ export const tracks = [
   },
   {
     side: 'A',
-    title: 'Why does nobody tour Liverpool?',
+    title: "Why don't more tours stop in Liverpool?",
     tag: 'ongoing',
     length: 'UK & IE',
     art: 'bars',
