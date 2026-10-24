@@ -120,8 +120,8 @@ export const experience = [
   {
     when: '2026',
     what: 'Software Developer Intern',
-    where: 'British Music Experience, via University of Liverpool',
-    note: "Building screens for a live museum exhibit that visitors control with hand gestures. Launching in November.",
+    where: 'University of Liverpool',
+    note: "Building screens for the Knowledge Wall, an exhibit at the British Music Experience that visitors control with hand gestures. Launching in November.",
   },
   {
     when: '2025',
