@@ -20,7 +20,7 @@ const pages = [
 
 function useRoute() {
   const read = () => {
-    const id = location.hash.replace(/^#\/?/, '')
+    const id = location.hash.replace(/^#\/?/, '').split('?')[0]
     return pages.some((p) => p.id === id) ? id : 'home'
   }
   const [route, setRoute] = useState(read)

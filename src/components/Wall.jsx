@@ -36,7 +36,7 @@ export default function Wall() {
 
       <div className="wall-group">
         <p className="wall-label">I made</p>
-        <a href="#/projects" className="news">
+        <a href="#/projects?show=dissertation" className="news">
           <span className="news-tag">MSc dissertation</span>
           <span className="news-head">Mapped 1,520 Wikipedia astronomy pages and the 10,103 links between them</span>
           <span className="news-more">read it on the projects page</span>
