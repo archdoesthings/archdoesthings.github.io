@@ -23,15 +23,18 @@ export const me = {
 export const tracks = [
   {
     side: 'B',
-    title: 'Memoria',
-    tag: 'British Music Experience',
+    title: 'Knowledge Wall',
+    tag: 'University of Liverpool internship',
     length: 'internship',
     art: 'graph',
     question:
       "What if a museum let you play with music using just your hands?",
     did:
-      "I built three screens for the British Music Experience: a DJ deck for genres, a stage of 3D instruments, and zone cards that flip on their own. Visitors get around with hand gestures picked up by a Leap Motion sensor. Opening in November.",
-    stats: [{ n: '4', l: 'gesture types' }],
+      "I built three screens for the Knowledge Wall, an exhibit going up at the British Music Experience: a DJ deck for genres, a stage of 3D instruments, and zone cards that flip on their own. Visitors get around with hand gestures picked up by a Leap Motion sensor. Launching in November.",
+    stats: [
+      { n: '3', l: 'screens' },
+      { n: '4', l: 'gestures' },
+    ],
     found: '',
     stack: ['React', 'React Three Fiber', 'Three.js', 'Leap Motion'],
     links: [],
@@ -118,7 +121,7 @@ export const experience = [
     when: '2026',
     what: 'Software Developer Intern',
     where: 'British Music Experience, via University of Liverpool',
-    note: "Building screens for a live museum exhibit that visitors control with hand gestures. Opening in November.",
+    note: "Building screens for a live museum exhibit that visitors control with hand gestures. Launching in November.",
   },
   {
     when: '2025',
