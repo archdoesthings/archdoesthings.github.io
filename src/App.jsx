@@ -60,7 +60,7 @@ function Home() {
         <Wall />
         <figure className="panel">
           <img src="/punk/yellow.jpg" alt="Archana in sunglasses, printed as a yellow halftone" />
-          <figcaption>NO NULLS</figcaption>
+          <figcaption>CLEAN DATA ONLY</figcaption>
         </figure>
         <figure className="figure">
           <img src="/punk/front.png" alt="Archana, photocopied cut-out" />

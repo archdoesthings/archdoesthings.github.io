@@ -146,7 +146,7 @@ p { margin: 0 0 1em; }
 .scrap.big { font-size: 2.9cqw; padding: .15cqw .8cqw .3cqw; }
 
 .panel {
-  position: absolute; right: 3%; bottom: 4%; width: 15%; margin: 0; z-index: 4;
+  position: absolute; right: .5%; bottom: 3%; width: 15%; margin: 0; z-index: 4;
   transform: rotate(2.5deg); box-shadow: 0 20px 30px -14px rgba(0,0,0,.6);
 }
 .panel img { display: block; width: 100%; height: auto; }
